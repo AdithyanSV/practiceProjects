@@ -1,5 +1,7 @@
 body{
-    background: rgb(10, 10, 10);
+    padding: 0;
+    margin: 0;
+    background: radial-gradient( #101010, #050505);
     font-family: Arial;
     color: #ffffff  ;
     display: flex;
@@ -8,29 +10,38 @@ body{
     height: 100vh;
 }
 .calculator{
-    background: rgb(0, 0, 0);
-    padding: 20px;
-    display: flexbox;
-    align-items: center;
+    background: rgba(2, 2, 2, .5);
+    padding: 10px;
+    display: grid;
+    align-content: center;
     justify-content: center;
-
+    grid-template-columns: repeat(4, 10vw);
+    grid-template-rows: minmax(15vh, auto) repeat(5, 12vh);
+}
+.span2{
+    grid-column: span 2;
 }
 .screen{
-    width: 40vw;
-    height: 15vh;
-    background-color: rgb(0, 0, 0);
+    background: radial-gradient( #030303, #101010) ;
     border: #1f1f1f 5px solid;
     border-radius: 5px;
     font-size: 40px;
     text-align: end;
-    padding: 5px;
-}
-.buttons{
-    width: 40vw;
+    padding: 10px;
+    margin: 5px;
+    grid-column: 1 / -1;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.previous{
+    color: rgb(150, 150, 150);
+    font-size: 25px;
+}
+.current{
+    color: rgb(235, 235, 255);
 }
 
 button{
@@ -38,10 +49,9 @@ button{
     color: rgb(235, 235, 255);
     border: none;
     border-radius: 5px;
-    font-size: 40px;
-    width: 9vw;
-    height: 10vh;
-    margin: 3px 1px;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 2px 2px;
 }
 button:hover {
     background-color: rgb(10, 10, 10);
@@ -64,9 +74,9 @@ button:active {
     background-color: #4479ff;
 }
 #equals:hover{
-    background-color: #4072fa;
+    background-color: #2d61ee;
     transition: .1s;
 }
 #equals:active{
-    background-color: #3a6bf0;
+    background-color: #2455db;
 }
