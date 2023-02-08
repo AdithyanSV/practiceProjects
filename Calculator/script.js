@@ -7,9 +7,19 @@ let accumulativeCalculation
 
 function calculate(button){
     const value = button.textContent
-    calculation.push(value)
-    accumulativeCalculation = calculation.join('')
-    screenDisplay.textContent = calculation
+    if (value === "AC"){
+        calculation = []
+        screenDisplay.textContent = ' '
+    } else if (value === "="){
+        screenDisplay.textContent = eval(accumulativeCalculation)
+    } else {
+        calculation.push(value)
+        accumulativeCalculation = calculation.join('')
+        screenDisplay.textContent = accumulativeCalculation
+    }
+
+
+    
 
 }
 
