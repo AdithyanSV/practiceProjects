@@ -23,6 +23,10 @@ body{
     justify-content: space-around;
     align-items: center;
 }
+.navlogo h2{
+    font-weight: 50;
+    font-stretch: ultra-expanded;
+}
 .navlinks{
     flex: 1;
     display: inline-flex;
