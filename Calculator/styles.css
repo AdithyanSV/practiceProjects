@@ -8,6 +8,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 95vw;
 }
 
 .calculator{
@@ -85,4 +86,12 @@ button:active {
 }
 #equals:active{
     background-color: #2455db;
+}
+.mode{
+    justify-content: center;
+    align-self: baseline;
+}
+.mode img{
+    width: 2vw;
+    height: auto;
 }

@@ -9,32 +9,34 @@
     <title>Calculator</title>
 </head>
 <body>
+    <div class='mode'><button id="mode"><img id="modeImg" src="sources/sun.png"></button></div>  
     <div class='calculator'>
         <div class='screen'>
-            <div class='previous'>512+</div>
-            <div class='current'>256</div>
+            <div data-previous class='previous'>Neon Claculator</div>
+            <div data-current class='current'>.</div>
         </div>
-            <button class='op' id="AC">AC</button>
-            <button class='op'>DEL</button>
-            <button class='op'>%</button>
-            <button class='op'>+</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class='op'>-</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class='op'>*</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class='op'>/</button>
+            <button data-ac class='op'>AC</button>
+            <button data-del class='op'>DEL</button>
+            <button data-operand class='op'>%</button>
+            <button data-operand class='op'>+</button>
+            <button data-number>7</button>
+            <button data-number>8</button>
+            <button data-number>9</button>
+            <button data-operand class='op'>-</button>
+            <button data-number>4</button>
+            <button data-number>5</button>
+            <button data-number>6</button>
+            <button data-operand class='op'>*</button>
+            <button data-number>1</button>
+            <button data-number>2</button>
+            <button data-number>3</button>
+            <button data-operand class='op'>/</button>
             <button class='span2'>0</button>
-            <button>.</button>
-            <button id="=">=</button>
+            <button data-number>.</button>
+            <button data-equals id="=">=</button>
 
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -10,8 +10,14 @@ function calculate(button){
     if (value === "AC"){
         calculation = []
         screenDisplay.textContent = ' '
+        screenRes.textContent = ''
     } else if (value === "="){
+        screenRes.textContent = accumulativeCalculation
         screenDisplay.textContent = eval(accumulativeCalculation)
+    }    else if (value === "DEL"){
+        calculation = []
+        screenDisplay.textContent = textContent-1
+        screenRes.textContent = textContent-1
     } else {
         calculation.push(value)
         accumulativeCalculation = calculation.join('')
@@ -24,3 +30,19 @@ function calculate(button){
 }
 
 buttons.forEach(button => button.addEventListener('click', () => calculate(button)))
+
+
+const image = document.getElementById('modeImg');
+const button = document.getElementById('mode');
+let isImage1 = true;
+
+button.addEventListener('click', function() {
+  if (isImage1) {
+    image.src = 'sources/sun.png';
+    isImage1 = false;
+  } 
+  else {
+    image.src = 'sources/moon.png';
+    isImage1 = true;
+  }
+});
