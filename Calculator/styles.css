@@ -1,18 +1,37 @@
+:root{
+    --bg: radial-gradient(#101010, #050505); 
+    /* (#101010, #050505) ( #888888, #ffffff)*/
+    --color: #ffffff;
+    /* #ffffff #000000 */
+    --calc-bg: rgba(2, 2, 2, .75);
+    /* (2, 2, 2, .75) (220, 220, 250, .5)*/
+    --screen: #000000;
+    /* #000000 #222222 */   
+    --color-prev: rgb(150, 150, 150);
+    --color-current: rgb(235, 235, 255);
+}
 body{
     padding: 0;
     margin: 0;
-    background: radial-gradient( #101010, #050505);
+    background: var(--bg);
     font-family: Arial;
-    color: #ffffff  ;
+    color: var(--color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 95vw;
+    width: 100vw;
 }
 
-.calculator{
-    background: rgba(2, 2, 2, .75);
+.vp{
+    display: flex;
+    height: 100vh;
+    width: 95vw;
+    justify-content: center;
+    align-items: center;
+}
+#calculator{
+    background: var(--calc-bg);
     padding: 10px;
     display: grid;
     align-content: center;
@@ -20,12 +39,15 @@ body{
     grid-template-columns: repeat(4, 10vw);
     grid-template-rows: minmax(15vh, auto) repeat(5, 12vh);
     box-shadow: 5px 5px 20px #2455db;
+    border-radius: 1vw;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 .span2{
     grid-column: span 2;
 }
 .screen{
-    background: #000000 ;
+    background: var(--screen) ;
     border: #1f1f1f 4px solid;
     border-radius: 5px;
     font-size: 40px;
@@ -41,11 +63,11 @@ body{
     box-shadow: 0px 0px 10px 2px rgb(31, 31, 31) inset;
 }
 .previous{
-    color: rgb(150, 150, 150);
+    color: var(--color-prev);
     font-size: 25px;
 }
 .current{
-    color: rgb(235, 235, 255);
+    color: var(--color-current);
 }
 
 button{
@@ -87,11 +109,10 @@ button:active {
 #equals:active{
     background-color: #2455db;
 }
-.mode{
-    justify-content: center;
-    align-self: baseline;
-}
-.mode img{
+#modeImg{
+    justify-self: flex-end;
+    align-self: flex-end;
+    padding: 1vw;
     width: 2vw;
-    height: auto;
+    height: 2vw;
 }

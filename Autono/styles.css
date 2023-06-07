@@ -48,6 +48,20 @@ body{
 	display: inline-block;
 	padding: 8px 25px;
 }
+.navlinks ul li ::after{
+    content: '';
+	width: 0%;
+	height: 2px;
+	background: rgb(0, 0, 0);
+    color: #ffffee;
+    border-radius: 5px;
+	display: block;
+	margin: auto;
+	transition: .5s;
+}
+.navlinks ul li :hover::after{
+    width: 100%;
+}
 .hero{
     height: 90vh;
     display: flex;
