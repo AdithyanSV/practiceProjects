@@ -1,0 +1,209 @@
+:root{
+    --bg: radial-gradient(#101010, #050505); 
+    /* (#101010, #050505) ( #888888, #ffffff)*/
+    --color: #ffffff;
+    /* #ffffff #000000 */
+    --calc-bg: rgba(2, 2, 2, .75);
+    /* (2, 2, 2, .75) (220, 220, 250, .5)*/
+    --screen: #000000;
+    /* #000000 #222222 */   
+    --color-prev: rgb(150, 150, 150);
+    --color-current: rgb(235, 235, 255);
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: var(--bg);
+    font-family: Arial;
+    color: var(--color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.vp{
+    display: flex;
+    height: 100vh;
+    width: 95vw;
+    justify-content: center;
+    align-items: center;
+}
+#converter{
+    background: var(--calc-bg);
+    padding: 10px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 10vw);
+    grid-template-rows: minmax(15vh, auto) repeat(4, 12vh);
+    box-shadow: 5px 5px 20px #2455db;
+    border-radius: 1vw;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+.span2{
+    grid-column: span 2;
+}
+.vspan2{
+    grid-row: span 2;
+}
+.screens{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    text-align: end;
+    padding-bottom: 5px;
+    margin: 5px;
+    grid-column: 1 / -1;
+}
+.screen{
+    background: var(--screen) ;
+    width: 100%;
+    height: 100%;
+    border: #1f1f1f 4px solid;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: end;
+    margin: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    word-wrap: break-word;
+    word-break: break-all;
+    box-shadow: 0px 0px 10px 2px rgb(31, 31, 31) inset;
+}
+.previous{
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+    color: var(--color-prev);
+    font-size: 20px;
+    display: flex;
+}
+.current{
+    color: var(--color-current);
+    width: 100%;
+    height: 100%;
+}
+select{
+    border-radius: 5px;
+    background: none;
+    border: none;
+    padding: 5px;
+    margin-right: 5px;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    width: 12vw;
+}
+select:focus{
+    background: rgba(150, 150, 150, 0.1);
+    color: #2455db;
+}
+input{
+    background: rgba(0, 0, 0, 0);
+    color: var(--color-current);
+    font-size: 35px;
+    text-align: right;
+    
+    border: none;
+    height: 90%;
+    width: 90%;
+    margin: 5px 5px;
+    word-wrap: break-word;
+}
+input:focus {
+    outline: none;
+    word-wrap: break-word;    
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button{
+    background-color: #0a0a0a ;
+    color: rgb(235, 235, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 3px 3px;
+}
+button:hover {
+    background-color: #0e0e0e;
+    box-shadow: 0px 0px 5px #151515;
+    transition: .2s;
+}
+button:active {
+    background-color: #151515;
+}
+.op{
+    background-color: #151515;
+}
+.op:hover{
+    background-color: #0e0e0e;
+    box-shadow: 0px 0px 5px #151515;
+    transition: .2s;
+}
+.op:active{
+    background-color: #0a0a0a;
+}
+#equals {
+    background-color: #4479ff;
+}
+#equals:hover{
+    background-color: #2d61ee;
+    box-shadow: 0px 0px 6px #2455db;
+    transition: .3s;
+}
+#equals:active{
+    background-color: #2455db;
+}
+#sidebar{
+    justify-self: flex-end;
+    align-self: flex-end;
+    width: 4vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #1f1f1f 1px solid;
+    border-radius: 1vw 0vw 0vw 1vw;
+    background: rgba(20, 20, 20, .3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: fixed;
+}
+#menu{
+    width: 2vw;
+    height: 2vw;
+    padding: 1vw;
+}
+.selector{
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.select{
+    width: 3vw;
+    height: 3vw;
+    padding: 1vw;
+}
+#modeImg{
+    justify-self: flex-end;
+    padding: 1vw;
+    width: 2vw;
+    height: 2vw;
+}
+.hidden{
+    display: none;
+    opacity: 0;
+}
