@@ -203,7 +203,3 @@ button:active {
     width: 2vw;
     height: 2vw;
 }
-.hidden{
-    display: none;
-    opacity: 0;
-}
