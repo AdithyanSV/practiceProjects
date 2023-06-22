@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="sources/briefcase.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <title>Toolkit</title>
+</head>
+<body>
+    <img id="modeImg" src="sources/sun.png" alt="mode">
+ 
+    <div class="vp">
+        <div class='conv' id="converter">
+            <div class="screens">
+                <div class='screen'>
+                    <div data-previous class='previous'>From:
+                        <select id="fromDrop" class="dropdown">
+                            <option value="radian">Radian</option>
+                            <option value="turn">Turn</option>
+                            <option value="degree">Degree</option>
+                            <option value="gradian">Gradian</option>
+                        </select></div>
+                    <div data-current class='current'><input type="number" id="fromin"></div>
+                </div>
+                <div class='screen'>
+                    <div data-previous class='previous'>To:
+                        <select id="toDrop" class="dropdown">
+                            
+                            <option value="radian">Radian</option>
+                            <option value="turn">Turn</option>
+                            <option value selected="degree">Degree</option>
+                            <option value="gradian">Gradian</option>
+                        </select></div>
+                        <div data-current class='current' id="toout"></div>
+                    </div>
+                    </div>  
+                    
+                    <button class='button'>7</button>
+                    <button class='button'>8</button>
+                    <button class='button'>9</button>
+                    <div id="unitDiv">Unit Type<select class="dropdown" id="unit" onchange="updateOptions()">
+                        <option value="angle">angle</option>
+                        <option value="area">area</option>
+                        <option value="data">data</option>
+                        <option value="force">force</option>
+                        <option value="length">length</option>
+                        <option value="mass">mass</option>
+                        <option value="pressure">pressure</option>
+                        <option value="temperature">temperature</option>
+                        <option value="time">time</option>
+                        <option value="volume">volume</option>
+                    </select></div>
+                    <button class='button'>4</button>
+                    <button class='button'>5</button>
+                    <button class='button'>6</button>
+                    <button class='op button'>AC</button>
+                    <button class='button'>1</button>
+                    <button class='button'>2</button>
+                    <button class='button'>3</button>
+                    <button class='op button'>DEL</button>
+                    <button class='button span2'>0</button>
+                    <button class='button'>.</button>
+                    <button class='button' id="equals">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
